@@ -1,0 +1,69 @@
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/inter.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Caveat */
+@font-face {
+  font-family: 'Caveat';
+  src: url('./fonts/caveat.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Dancing Script */
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('./fonts/dancing-script.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Orbitron */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('./fonts/orbitron.woff2') format('woff2');
+  font-weight: 400 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Rajdhani */
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-300.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-500.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('./fonts/rajdhani-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Noto Sans SC (Fallback/Supplement) */
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('./fonts/noto-sans-sc-latin.woff2') format('woff2');
+  font-weight: 400 700; /* Assuming standard weights supported by the subset */
+  font-display: swap;
+  font-style: normal;
+}

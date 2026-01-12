@@ -1,0 +1,6 @@
+/* ⚠️ 必须添加到全局 CSS 文件中！ ⚠️ */
+@import './fonts.css';
+
+html,
+body,
+#app {}

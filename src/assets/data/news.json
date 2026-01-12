@@ -1,0 +1,156 @@
+[
+    {
+        "id": 11,
+        "title": "创业手记 11：关于 AICG 的深度见解与普通人的机会",
+        "date": "2026年1月9日",
+        "category": "风口",
+        "tags": [
+            "AIGC",
+            "创业",
+            "搞钱"
+        ],
+        "excerpt": "AI 不是来淘汰我们的，是来武装我们的。从内容创作到电商视觉，从知识付费到企业服务，深度解析普通人乘上 AIGC 东风的四大方向。",
+        "fileName": "aicg-entrepreneurship.md",
+        "coverImage": "/img/news/aicg-cover.png"
+    },
+    {
+        "id": 10,
+        "title": "创业手记 10：花园进不去，试试“后院”？",
+        "date": "2026年1月8日",
+        "category": "捡漏",
+        "tags": [
+            "起名",
+            "近义词",
+            "捡漏"
+        ],
+        "excerpt": "Garden 系列全军覆没。是时候启用 B 计划了：Orchard（果园）、Grove（丛林）、Atrium（中庭）......这些词不仅没人抢，反而更有格调？",
+        "fileName": "naming-garden-synonyms.md",
+        "coverImage": "/img/news/startup-10.jpg"
+    },
+    {
+        "id": 9,
+        "title": "创业手记 09：铁了心要“花园”，换个前缀试试",
+        "date": "2026年1月8日",
+        "category": "执念",
+        "tags": [
+            "起名",
+            "Garden",
+            "像素"
+        ],
+        "excerpt": "Vector 不行，那就换别的！Pixel Garden（像素花园）、Matte Garden（哑光花园）、Logic Garden（逻辑花园）......只有保留了“花园”，灵魂才还在。",
+        "fileName": "naming-garden-prefixes.md",
+        "coverImage": "/img/news/startup-09.jpg"
+    },
+    {
+        "id": 8,
+        "title": "创业手记 08：花园被占了？试试整片森林",
+        "date": "2026年1月8日",
+        "category": "灵感",
+        "tags": [
+            "起名",
+            "平替",
+            "绿洲"
+        ],
+        "excerpt": "既然 Garden 难搞，不如格局打开。绿洲 (Oasis)、港湾 (Bay)、力场 (Field)......这些听起来是不是更酷？",
+        "fileName": "naming-garden-alternatives.md",
+        "coverImage": "/img/news/startup-08.jpg"
+    },
+    {
+        "id": 7,
+        "title": "创业手记 07：双轨制——成年人的世界不做选择题",
+        "date": "2026年1月8日",
+        "category": "决策",
+        "tags": [
+            "策略",
+            "双品牌",
+            "定稿"
+        ],
+        "excerpt": "对外叫“矢量花园”玩潮流，注册叫“智图科技”接大单。这招“前店后厂”，才是通吃政企与创意的终极解法。",
+        "fileName": "naming-strategy-analysis.md",
+        "coverImage": "/img/news/startup-07.jpg"
+    },
+    {
+        "id": 6,
+        "title": "创业手记 06：回归传统，从“高大上”到“伟光正”",
+        "date": "2026年1月8日",
+        "category": "转型",
+        "tags": [
+            "起名",
+            "传统",
+            "政企"
+        ],
+        "excerpt": "领导不喜欢太虚的名字。为了接政企大单，我决定参考一下“智图”、“安信”、“华盛”这些稳如泰山的名字。",
+        "fileName": "naming-traditional.md",
+        "coverImage": "/img/news/startup-06.jpg"
+    },
+    {
+        "id": 5,
+        "title": "创业手记 05：不信邪，再来 100 个",
+        "date": "2026年1月8日",
+        "category": "疯了",
+        "tags": [
+            "起名",
+            "100个",
+            "脑爆"
+        ],
+        "excerpt": "如果 20 个不够，那就来 100 个！几何、光影、宇宙、自然......总有一个能击中你的心巴。",
+        "fileName": "naming-100-ideas.md",
+        "coverImage": "/img/news/startup-05.jpg"
+    },
+    {
+        "id": 4,
+        "title": "创业手记 04：域名被抢了？换个思路",
+        "date": "2026年1月8日",
+        "category": "实战",
+        "tags": [
+            "域名",
+            "VectorGarden",
+            "Design"
+        ],
+        "excerpt": "VectorGarden.com 果然太贵了。不过作为技术型工作室，.design 或者 .studio 也许是更有个性的选择？",
+        "fileName": "naming-domain-hunt.md",
+        "coverImage": "/img/news/startup-04.jpg"
+    },
+    {
+        "id": 3,
+        "title": "创业手记 03：妥协了，整四个字的吧",
+        "date": "2026年1月8日",
+        "category": "思考",
+        "tags": [
+            "起名",
+            "妥协",
+            "美学"
+        ],
+        "excerpt": "二字已死，三字难求。决定试试四个字的名字，比如“矢量花园”或者“深空灰度”，听起来是不是更有那味儿了？",
+        "fileName": "naming-4-chars.md",
+        "coverImage": "/img/news/startup-03.jpg"
+    },
+    {
+        "id": 2,
+        "title": "创业手记 02：起名真是个“大工程”",
+        "date": "2026年1月8日",
+        "category": "思考",
+        "tags": [
+            "起名",
+            "创业",
+            "纠结"
+        ],
+        "excerpt": "列了20个名字，分了极简构建、光影视觉、抽象未来几大派系。程序员起名，真的比写代码难多了。",
+        "fileName": "naming-ideas.md",
+        "coverImage": "/img/news/startup-02.jpg"
+    },
+    {
+        "id": 1,
+        "title": "创业手记 01：想做点不一样的",
+        "date": "2026年1月8日",
+        "category": "事业",
+        "tags": [
+            "创业",
+            "规划",
+            "商单"
+        ],
+        "excerpt": "接政府大单，做复杂系统。打破B端/G端系统“难用且丑”的魔咒，主打全栈与美学。",
+        "fileName": "startup-plan.md",
+        "coverImage": "/img/news/startup-01.jpg"
+    }
+]
