@@ -1,18 +1,5 @@
 <template>
-  <div class="focus-container" @mousemove="handleMouseMove">
-    <!-- Video Background -->
-    <video 
-        ref="bgVideo"
-        class="bg-video" 
-        :src="videoSrc"
-        loop
-        playsinline
-        crossorigin="anonymous"
-    >
-    </video>
-
-    <!-- Dark Overlay for Readability -->
-    <div class="overlay-dim" :class="{ 'faded': isFocusing }"></div>
+  <div class="focus-container">
 
     <!-- Main Setup Card -->
     <transition name="fade-scale">
@@ -53,23 +40,7 @@
                 </div>
             </div>
 
-            <!-- Audio Control -->
-            <div class="audio-section">
-                 <button class="btn-icon-small" @click="toggleMute">
-                     <span v-if="isMuted">🔇</span>
-                     <span v-else>🔊</span>
-                 </button>
-                 <div class="slider-container" :class="{ 'disabled': isMuted }">
-                     <input 
-                        type="range" 
-                        min="0" 
-                        max="1" 
-                        step="0.01" 
-                        v-model.number="volume"
-                        @input="updateVolume"
-                    >
-                 </div>
-            </div>
+
         </div>
     </transition>
 
@@ -102,13 +73,7 @@
                 </button>
             </div>
             
-            <!-- Mini Audio Toggle on hover -->
-             <div class="mini-audio" v-show="isHoveringBall">
-                 <button class="btn-icon-tiny" @click.stop="toggleMute">
-                     <span v-if="isMuted">🔇</span>
-                     <span v-else>🔊</span>
-                 </button>
-             </div>
+
         </div>
     </transition>
 
@@ -123,12 +88,9 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed, watch, nextTick } from 'vue';
+import { ref, onUnmounted, computed, watch } from 'vue';
 
 // --- State ---
-const bgVideo = ref(null);
-const videoSrc = ref('');
-const localVideoPath = '/sleep/13412182403661863_20260106_22191731.mp4';
 const isFocusing = ref(false);
 const isCountDown = ref(true); 
 const inputMinutes = ref(25);
@@ -136,10 +98,6 @@ const timeRemaining = ref(25 * 60);
 const elapsedTime = ref(0);
 const timerInterval = ref(null);
 const isHoveringBall = ref(false);
-
-// --- Audio State ---
-const isMuted = ref(false);
-const volume = ref(0.5);
 
 // --- Timer Logic ---
 const formattedTime = computed(() => {
@@ -174,22 +132,6 @@ const resetTimer = () => {
 
 const startFocus = () => {
   isFocusing.value = true;
-  
-  // Lazy Load Video
-  if (!videoSrc.value) {
-      videoSrc.value = localVideoPath;
-      nextTick(() => {
-          if (bgVideo.value) {
-              bgVideo.value.volume = volume.value;
-              bgVideo.value.play().catch(e => console.log('Autoplay prevented:', e));
-          }
-      });
-  } else {
-      // Resume if already loaded
-       if (bgVideo.value && bgVideo.value.paused) {
-          bgVideo.value.play().catch(e => console.log('Autoplay prevented:', e));
-      }
-  }
 
   if (isCountDown.value) {
       timeRemaining.value = inputMinutes.value * 60;
@@ -216,38 +158,11 @@ const stopFocus = () => {
   isHoveringBall.value = false;
   clearInterval(timerInterval.value);
   timerInterval.value = null;
-  
-  // Optional: Pause video when stopping focus to save resources
-  if (bgVideo.value) {
-      bgVideo.value.pause();
-  }
 };
 
-// --- Audio / Video Control ---
 
-const toggleMute = () => {
-    if (!bgVideo.value) return;
-    isMuted.value = !isMuted.value;
-    bgVideo.value.muted = isMuted.value;
-};
 
-const updateVolume = () => {
-    if (!bgVideo.value) return;
-    bgVideo.value.volume = volume.value;
-    if (volume.value > 0 && isMuted.value) {
-        isMuted.value = false;
-        bgVideo.value.muted = false;
-    }
-};
 
-const handleMouseMove = () => {
-    // Only used if needed for other UI elements
-};
-
-// --- Lifecycle ---
-onMounted(() => {
-    // Re-verify volume init if needed, but video load is now lazy
-});
 
 onUnmounted(() => {
     clearInterval(timerInterval.value);
@@ -270,31 +185,7 @@ onUnmounted(() => {
     align-items: center;
 }
 
-/* Background Video */
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    filter: brightness(0.9);
-    transition: filter 0.5s ease;
-}
 
-.overlay-dim {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-    transition: opacity 0.5s ease;
-}
-
-.overlay-dim.faded {
-    opacity: 0; /* Fully transparent when focused */
-}
 
 /* Floating Glass Card (Main Setup) */
 .floating-card {
@@ -423,54 +314,7 @@ onUnmounted(() => {
     opacity: 0.7;
 }
 
-/* Audio Section */
-.audio-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    padding-top: 16px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
 
-.btn-icon-small {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgba(255,255,255,0.8);
-    font-size: 1.2rem;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: background 0.2s;
-}
-
-.btn-icon-small:hover {
-    background: rgba(255,255,255,0.1);
-}
-
-.slider-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.slider-container.disabled {
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.slider-container input[type=range] {
-    width: 100%;
-    accent-color: white;
-    height: 4px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 2px;
-    cursor: pointer;
-}
 
 /* --- Floating Side Ball --- */
 .focus-ball {
@@ -545,25 +389,7 @@ onUnmounted(() => {
     transform: scale(1.05);
 }
 
-.mini-audio {
-    position: absolute;
-    bottom: 12px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
 
-.btn-icon-tiny {
-    background: none;
-    border: none;
-    color: rgba(255,255,255,0.6);
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.btn-icon-tiny:hover {
-    color: white;
-}
 
 
 /* Exit Button */
