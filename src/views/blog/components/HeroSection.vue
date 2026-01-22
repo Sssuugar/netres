@@ -107,6 +107,7 @@ const scrollToSection = (id) => {
 .hero-section {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;

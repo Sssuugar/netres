@@ -277,6 +277,7 @@ const handleMouseMove = (e) => {
 .blog-container {
   display: flex;
   height: 100vh;
+  height: 100dvh; /* 使用动态视口高度，更好地适配Mac等设备 */
   background: linear-gradient(135deg,
     rgba(255, 165, 0, var(--theme-intensity, 0)) 0%,
     rgba(255, 140, 0, calc(var(--theme-intensity, 0) * 0.8)) 50%,
@@ -299,8 +300,9 @@ const handleMouseMove = (e) => {
 .main-content {
   flex: 1;
   height: 100vh;
+  height: 100dvh; /* 使用动态视口高度 */
   margin-left: 0;
-  padding-bottom: 160px;
+  padding-bottom: 60px; /* 减少底部padding，让footer完整显示 */
   overflow-y: auto;
   scroll-behavior: smooth;
   position: relative;

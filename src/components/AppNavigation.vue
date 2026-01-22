@@ -33,6 +33,7 @@ const menuConfig = ref([
       {
         title: '核心大厂',
         items: [
+          { name: 'Cloudflare', url: 'https://dash.cloudflare.com' },
           { name: '阿里云', url: 'https://www.aliyun.com' },
           { name: '腾讯云', url: 'https://cloud.tencent.com' },
           { name: '华为云', url: 'https://www.huaweicloud.com' }
