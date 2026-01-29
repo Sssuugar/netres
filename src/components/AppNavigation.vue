@@ -46,6 +46,12 @@ const menuConfig = ref([
           { name: '百度智能云', url: 'https://cloud.baidu.com' },
           { name: '又拍云', url: 'https://www.upyun.com' }
         ]
+      },
+      {
+        title: '国外优选',
+        items: [
+          { name: 'Cloudcone', url: 'https://cloudcone.com' }
+        ]
       }
     ]
   },
