@@ -12,9 +12,7 @@
     "js-calendar-converter": "^0.0.7",
     "lucide-vue-next": "^0.562.0",
     "markdown-it": "^14.1.0",
-    "pdfjs-dist": "^4.10.38",
     "register-service-worker": "^1.7.2",
-    "three": "^0.181.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vuedraggable": "^4.1.0",
@@ -26,6 +24,7 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "compression-webpack-plugin": "^11.1.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"

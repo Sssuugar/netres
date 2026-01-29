@@ -1,0 +1,33 @@
+name: Test Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # 允许你在 GitHub 页面上手动点击按钮触发
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
+
+      - name: SSH Test and Deploy
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USER }}
+          SOURCE: "dist/"
+          TARGET: "/www/wwwroot/47.94.14.150" # 确认这是你 CentOS 上的实际路径
